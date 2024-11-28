@@ -10,5 +10,15 @@
         "src": "/(.*)",
         "dest": "main.py"
       }
-    ]
+    ],
+    "functions": {
+        "api/main.py": {
+        "memory": 1024,         
+        "maxDuration": 60       
+        },
+        "api/summarizer.py": {
+        "memory": 1024,
+        "maxDuration": 60
+        }
+    }
   }
