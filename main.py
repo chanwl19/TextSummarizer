@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from transformers import BartForConditionalGeneration, BartTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer
-from datasets import load_dataset
+#from datasets import load_dataset
 
 # Create FastAPI app
 app = FastAPI()
@@ -16,7 +16,7 @@ def check_model_exists():
     #print(os.path.exists(model_path))
     return True
 
-def train_model():
+""" def train_model():
 
     print('Start to train model....')
     dataset = load_dataset("xsum", trust_remote_code=True)
@@ -66,7 +66,10 @@ def preprocess_data(batch):
         padding="max_length", 
         return_tensors="pt"
     )
-    return {"input_ids": inputs["input_ids"], "attention_mask": inputs["attention_mask"], "labels": targets["input_ids"]}
+    return {"input_ids": inputs["input_ids"], "attention_mask": inputs["attention_mask"], "labels": targets["input_ids"]} """
+
+def train_model():
+    print('trained')
 
 if not check_model_exists():
     train_model()
