@@ -1,6 +1,0 @@
-os
-fastapi 
-uvicorn
-pydantic
-transformers
-datasets
