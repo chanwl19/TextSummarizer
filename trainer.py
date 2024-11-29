@@ -56,6 +56,6 @@ def preprocess_data(batch):
         padding="max_length", 
         return_tensors="pt"
     )
-    return {"input_ids": inputs["input_ids"], "attention_mask": inputs["attention_mask"], "labels": targets["input_ids"]} """
+    return {"input_ids": inputs["input_ids"], "attention_mask": inputs["attention_mask"], "labels": targets["input_ids"]}
 
 
